@@ -1,0 +1,25 @@
+{
+    "cars-ids":{
+        "ground_shock" : "d7204d5e4bee", 
+        "red_skull" : "daa87a9810c9" 
+    },
+    "files":{
+        "trackData" : "track_data.txt",
+        "trackImage": "track_image.jpg",
+        "trackPieces": "track_piece_list.txt"
+    },
+    "configs":{
+        "host": "127.0.0.1",
+        "port": 8005
+    },
+    "trackIDs":[
+        {
+            "straight":
+            {
+                "start_piece": [33, 34],
+                "normal_piece": [36, [39, 40] ,43, 46, 48, 51]
+            },
+            "turn":[11, 17, 18, 20, 23]
+        }
+    ]
+}
