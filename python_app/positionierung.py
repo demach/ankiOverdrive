@@ -7,7 +7,7 @@ import position_selector
 
 # parse input
 parser = argparse.ArgumentParser()
-parser.add_argument("--car", help="id of the bluetooth car", default="daa87a9810c9")
+parser.add_argument("--car", help="id of the bluetooth car", default="d7204d5e4bee")
 parser.add_argument("--host", help="host of the node gateway for bluetooth communication", default='127.0.0.1')
 parser.add_argument("--port", help="port of the node gateway for bluetooth communication", type=int, default=8005)
 args = parser.parse_args()
@@ -22,7 +22,7 @@ OFFSET_PRO_LANE = 8.5
 # file position
 TRACK_FILE = 'track_piece_list.txt'
 
-selection = position_selector.selector(2, 28, TRACK_FILE)
+selection = position_selector.selector(2, 4, TRACK_FILE)
 
 print(selection)
 
@@ -40,6 +40,8 @@ def my_driving_policy(self, **kwargs):
         sleep(1)
         self.change_speed(600, 2000)
         self.change_lane(500,1000, -68)
+        
+    print(kwargs)
 
 try:
     # let's drive!
