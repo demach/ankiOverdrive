@@ -5,7 +5,7 @@ def selector(desired_piece, desired_location, track_piece_list = 'track_piece_li
     
     doable = True
 
-    TRACK_DATA = 'track_images/track_data.json'
+    TRACK_DATA = 'track_data.json'
 
     with open(track_piece_list, "r") as file:
         track_data = file.read().split("\n")
