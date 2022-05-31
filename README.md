@@ -23,4 +23,6 @@
 - python program:
     - either edit default parameter for car_uuid in python file or pass it in command_line as an argrument (--car [car_uuid])
     - default port: 8005
+    - program to discover the track: fts_track_discovery.py
+    - program to drive to specific position: positionierung.py
 - anki.json file contains uuid for the cars we tested the project with
