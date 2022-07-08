@@ -29,10 +29,10 @@ def selector(desired_piece, desired_location, track_piece_list = 'track_piece_li
                 reverse_list = True
             break
 
-    if piece in start_piece_long:
+    if piece in start_piece_short:
         piece_list = track_info['start_33_locations_start']
         location_list = track_info['start_scheme_33']
-    if piece in start_piece_short:
+    if piece in start_piece_long:
         piece_list = track_info['start_34_locations_start']
         location_list = track_info['start_scheme_34']
     if piece in straight_pieces:
@@ -51,10 +51,12 @@ def selector(desired_piece, desired_location, track_piece_list = 'track_piece_li
                 #print(reverse_list)
                 if piece_list[i] == piece_list[-1]:
                     desired_lane = i
+                    #print(piece_list,location_list, desired_location)
                     loc_index = location_list[i].index(desired_location)
                     if len(location_list[i-2]) == 2:
                         locations =  [location_list[i-2][loc_index-1], location_list[i-1][loc_index], location_list[i][loc_index]]
                     locations = [location_list[i-2][loc_index], location_list[i-1][loc_index], location_list[i][loc_index]]
+                    break
                 
                 if int(desired_location) >= int(piece_list[i]) and int(desired_location) < int(piece_list[i+1]):
                     desired_lane = i
@@ -70,6 +72,7 @@ def selector(desired_piece, desired_location, track_piece_list = 'track_piece_li
                     if len(location_list[i-2]) == 2:
                         locations =  [location_list[i-2][loc_index-1], location_list[i-1][loc_index], location_list[i][loc_index]]
                     locations = [location_list[i-2][loc_index], location_list[i-1][loc_index], location_list[i][loc_index]]
+                    break
                 
                 if int(desired_location) >= int(piece_list[i]) and int(desired_location) < int(piece_list[i-1]):
                     desired_lane = i

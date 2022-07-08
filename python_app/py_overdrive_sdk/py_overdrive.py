@@ -16,6 +16,7 @@ from queue import Queue, Empty
 
 class Overdrive:
 
+
     def __init__(self, host, port, uuid, driving_policy=None, verbose=False) -> None:
         """
 
@@ -44,6 +45,7 @@ class Overdrive:
         self._verbose = verbose
         # finally try to connect to the car through node socket
         self._connect(self.uuid)
+        
         return
 
     def __del__(self) -> None:
@@ -155,7 +157,7 @@ class Overdrive:
         UTILS FUNCTIONS
     """
 
-    def build_location_event(self, location, piece, offset, speed, clockwise, notification_time) -> None:
+    def build_location_event(self, location, piece, offset, speed, clockwise, notification_time):
         return {
             'location': location,
             'piece': piece,
@@ -230,3 +232,5 @@ class Overdrive:
 
     def offset_from_center(self, offset) -> None:
         command = struct.pack("<BBf", 0x2c, offset, 0.0)
+        
+        

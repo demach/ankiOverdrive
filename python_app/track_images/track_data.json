@@ -85,8 +85,8 @@
         [32,33,34],
         [35,36,37]
     ],
-    "start_piece_long": [34],
-    "start_piece_short": [33],
+    "start_piece_long": [33],
+    "start_piece_short": [34],
     "straight_pieces": [36, 39, 40, 43, 46, 48, 51],
     "curve_pieces": [11, 17, 18, 20, 23],
     "curve_locations_start": [0, 2 , 4, 6, 8, 10, 12, 14, 16, 18, 20, 23, 26, 29, 32, 35],

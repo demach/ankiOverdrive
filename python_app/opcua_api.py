@@ -85,6 +85,7 @@ AnzahlStreckenstueck.set_writable()
 server.start()
 print("Server started at {}".format(url))
 
+trackdiscovery = False
 
 while True:
     #always reset these values
@@ -108,9 +109,13 @@ while True:
         FahrzeugSteht.set_value(False)
         SystemBereit.set_value(False)
         SystemFehler.set_value(False)
-        if not setupmode and desired_position != 0:            
-            piece = int(str(desired_position)[:-3])
-            position = int(str(desired_position)[-3:])
+        if not setupmode and trackdiscovery:
+            if desired_position > 100: 
+                piece = int(str(desired_position)[:-3])
+                position = int(str(desired_position)[-3:])
+            else:
+                piece = 0
+                position = int(desired_position)
             selection = position_selector.selector(piece, position, TRACK_FILE)
             
             #if position is not available on the track publish an error bit 
@@ -144,6 +149,7 @@ while True:
             SetupModus.set_value(reset)
             Start.set_value(reset)
             TrackdiscoveryErfolgreich.set_value(True)
+            trackdiscovery = True
         
         else:
             Start.set_value(reset)
