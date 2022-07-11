@@ -2,7 +2,7 @@
 - python_wrapper for anki Overdrive
 - edited the Overdrive-Class from the main-project for more actions
 - github project we used as a base: https://github.com/jacopotagliabue/anki-drive-python-sdk
-
+- information: https://transparent-scorpio-4cb.notion.site/Informationen-zu-Bahn-a8e4171182dc4fbfb20cd6d0679c505a
 [Goal]
 - Use anki-overdrive as a transport system
 
