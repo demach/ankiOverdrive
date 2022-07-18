@@ -27,3 +27,9 @@
     - program to discover the track: fts_track_discovery.py
     - program to drive to specific position: positionierung.py
 - anki.json file contains uuid for the cars we tested the project with
+
+- to start all programms with on script: 
+    - run from main directory "bash run.sh"
+    - on the first run enter: first
+    - on the second run, you can enter the found uuid 
+        --> this will execute all scripts for that uuid
