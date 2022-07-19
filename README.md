@@ -33,6 +33,7 @@
     - on the first run enter: first
     - on the second run, you can enter the found uuid
         --> this will execute all scripts for that uuid
+        
     [Attention]
     - if you dont have a codesys-runtime installed, this script will throw an error:
         - to disable reastarting a codesys-runtime, you have manually comment it in the run.sh script
